@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नंदिनी फिजियोथेरेपी एंड आयुर्वेद केयर सेंटर</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Hind:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Hind', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            transition: all 0.4s;
+        }
+        .navbar-scrolled {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?physiotherapy') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 50px;
+            background-color: #007bff;
+        }
+        .treatment-item, .therapy-item {
+            transition: all 0.3s ease;
+        }
+        .treatment-item:hover, .therapy-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .btn-floating {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+        .btn-floating:hover {
+            transform: scale(1.1);
+        }
+        .navbar .btn {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+.hero {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        text-align: center;
+    }
+    
+    .hero img {
+        margin-top: 2rem;
+    }
+}
+
+#about i {
+    transition: transform 0.3s ease-in-out;
+}
+
+#about i:hover {
+    transform: scale(1.1);
+}
+
+#about h3 {
+    margin-bottom: 1rem;
+}
+
+#about p {
+    color: #6c757d;
+}
+
+.treatment-item {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.treatment-item:hover {
+    transform: translateY(-5px);
+}
+
+.treatment-item .card-body {
+    padding: 2rem;
+}
+
+.treatment-item i {
+    margin-bottom: 1rem;
+}
+
+.treatment-item .card-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.treatment-item .card-text {
+    color: #6c757d;
+}
+
+
+.therapy-item {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.therapy-item:hover {
+    transform: translateY(-5px);
+}
+
+.therapy-item .card-body {
+    padding: 2rem;
+}
+
+.therapy-item i {
+    margin-bottom: 1rem;
+}
+
+.therapy-item .card-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.therapy-item .card-text {
+    color: #6c757d;
+}
+
+
+.hero {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.satisfaction-guarantee {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50px;
+    transform: rotate(15deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(15deg) scale(1);
+    }
+    50% {
+        transform: rotate(15deg) scale(1.05);
+    }
+    100% {
+        transform: rotate(15deg) scale(1);
+    }
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.8rem !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding: 0.7rem 1rem;
+    margin: 0 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 0.7rem 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+    
+    .d-flex {
+        margin-top: 1rem;
+    }
+}
+
+/* Add this to your existing styles or create a new style block */
+body {
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+}
+
+.hero {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper:hover .image-overlay {
+    height: 100%;
+}
+
+.image-overlay p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.satisfaction-guarantee {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50px;
+    transform: rotate(15deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(15deg) scale(1);
+    }
+    50% {
+        transform: rotate(15deg) scale(1.05);
+    }
+    100% {
+        transform: rotate(15deg) scale(1);
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold" href="#">नंदिनी फिजियोथेरेपी</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#treatments">उपचार</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#therapies">थेरेपी</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doctor">डॉक्टर</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#appointment" class="btn btn-outline-primary me-2">अपॉइंटमेंट</a>
+                    <a href="#contact" class="btn btn-primary">संपर्क</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero position-relative">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 mb-4 custom-bold-heading" data-aos="fade-up">नंदिनी फिजियोथेरेपी एंड आयुर्वेद केयर सेंटर</h1>
+                    <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">आपके स्वास्थ्य और कल्याण के लिए समर्पित</p>
+                    <a href="#appointment" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">अपॉइंटमेंट बुक करें</a>
+                </div>
+                <div class="col-md-6 position-relative" data-aos="fade-left" data-aos-delay="300">
+                    <div class="image-wrapper">
+                        <img src="https://img.freepik.com/free-photo/young-physiotherapist-helping-patient-with-back-problems_23-2149115628.jpg?t=st=1725458618~exp=1725462218~hmac=2165ee28d9986ecc8b66cf70d26c1ab7fd175d4908a10631180a197bdc045592&w=740" alt="Physiotherapy Session" class="img-fluid rounded">
+                        <div class="image-overlay">
+                            <p>आपके स्वास्थ्य के लिए विशेषज्ञ देखभाल</p>
+                        </div>
+                    </div>
+                    <div class="satisfaction-guarantee">100% संतुष्टि गारंटी</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">हमारे बारे में</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">यहाँ हड्डी, नसों व मांसपेशियों का मरीज़ों द्वारा इलाज किया जाता है।</p>
+            <div class="row mt-5">
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-user-md fa-4x mb-4 text-primary"></i>
+                    <h3>फिजियोथेरेपी</h3>
+                    <p>व्यायाम और मैनुअल तकनीकों के माध्यम से शारीरिक समस्याओं का इलाज</p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-leaf fa-4x mb-4 text-success"></i>
+                    <h3>आयुर्वेद</h3>
+                    <p>प्राचीन भारतीय चिकित्सा पद्धति द्वारा समग्र स्वास्थ्य देखभाल</p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-heartbeat fa-4x mb-4 text-danger"></i>
+                    <h3>स्वास्थ्य देखभाल</h3>
+                    <p>व्यापक स्वास्थ्य सेवाएं जो आपके समग्र कल्याण पर केंद्रित हैं</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="treatments" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5" data-aos="fade-up">उपचारित समस्याएँ</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-spine fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">कमर दर्द</h5>
+                            <p class="card-text">Lumber Spondolosis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-dizzy fa-3x mb-3 text-warning"></i>
+                            <h5 class="card-title">चक्कर आना (सर दर्द)</h5>
+                            <p class="card-text">Vertigo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-child fa-3x mb-3 text-info"></i>
+                            <h5 class="card-title">कंधा जाम होना</h5>
+                            <p class="card-text">Frozen Shoulder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="250">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-head-side-virus fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">गर्दन में दर्द</h5>
+                            <p class="card-text">Cervical Spondolysis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bone fa-3x mb-3 text-success"></i>
+                            <h5 class="card-title">जोड़ों में दर्द, मोच</h5>
+                            <p class="card-text">Arthritis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="350">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-user-injured fa-3x mb-3 text-secondary"></i>
+                            <h5 class="card-title">ऑपरेशन के बाद जोड़ों में जाम होना</h5>
+                            <p class="card-text">Stiffness</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shoe-prints fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">एड़ी और पैर में दर्द होना</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="450">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-route fa-3x mb-3 text-warning"></i>
+                            <h5 class="card-title">शियाटिका दर्द</h5>
+                            <p class="card-text">Sciatica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-brain fa-3x mb-3 text-info"></i>
+                            <h5 class="card-title">लकवा, बहरे का लक्षण</h5>
+                            <p class="card-text">Paralysis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="550">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-running fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">स्पोर्ट्स इंजरी</h5>
+                            <p class="card-text">Sports Injury</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-baby fa-3x mb-3 text-success"></i>
+                            <h5 class="card-title">Cerebral Palsy</h5>
+                            <p class="card-text">CP Child</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="650">
+                    <div class="card h-100 treatment-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-hand-sparkles fa-3x mb-3 text-secondary"></i>
+                            <h5 class="card-title">इन्कलनसहट, सुनपन</h5>
+                            <p class="card-text">Tingling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="therapies" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5" data-aos="fade-up">थेरेपी (Therapies)</h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-pump-medical fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">Cupping</h5>
+                            <p class="card-text">कमर दर्द</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-syringe fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">Dry Needling</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cog fa-3x mb-3 text-warning"></i>
+                            <h5 class card-title">टेकेशन मशीन</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="250">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-wave-square fa-3x mb-3 text-info"></i>
+                            <h5 class="card-title">अल्ट्रासाउंड थेरेपी</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-radiation fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">इन्फ्रारेड रेडिएशन</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="350">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-broadcast-tower fa-3x mb-3 text-success"></i>
+                            <h5 class="card-title">शॉर्ट वेव डायथर्मी</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bolt fa-3x mb-3 text-warning"></i>
+                            <h5 class="card-title">इंटरफेरेंशियल थेरेपी</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="450">
+                    <div class="card h-100 therapy-item">
+                        <div class="card-body text-center">
+                            <i class="fas fa-hands fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">मैनुअल थेरेपी</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctor" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">हमारे डॉक्टर</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Light" 
+                         alt="डॉ. राजनंदिनी शर्मा" 
+                         class="mb-3" 
+                         style="width: 200px; height: 200px;">
+                    <h3>डॉ. राजनंदिनी शर्मा</h3>
+                    <p class="mb-2">M.P.T, B.P.T</p>
+                    <p class="mb-3">Ex-Physio (अनुभव 4 वर्ष)</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">पूर्व अनुभव</h5>
+                            <ul class="list-unstyled">
+                                <li>संतोक्बा दुलाभ जी मेमोरियल हॉस्पिटल (जयपुर)</li>
+                                <li>जीवन रेखा सुपरस्पेशलिस्ट हॉस्पिटल (जयपुर)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">अपॉइंटमेंट बुक करें</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <form id="appointmentForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">नाम</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">फोन नंबर</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">तारीख</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">समय</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">अपॉइंटमेंट बुक करें</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">संपर्क जानकारी</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4>संपर्क नंबर</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-telephone"></i> राजनंदिनी जोशी: 7665813577</li>
+                        <li><i class="bi bi-telephone"></i> निखिल शर्मा: 7489033854</li>
+                        <li><i class="bi bi-telephone"></i> मयंक शर्मा: 8983409561</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4>पता</h4>
+                    <p><i class="bi bi-geo-alt"></i> तांबेसरा रोड, निर्मल वाटर प्लांट के पास, सज्जनगढ़</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 नंदिनी फिजियोथेरेपी एंड आयुर्वेद केयर सेंटर. सर्वाधिकार सुरक्षित.</p>
+        </div>
+    </footer>
+
+    <a href="#appointment" class="btn-floating"><i class="bi bi-calendar-check"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('navbar-scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('navbar-scrolled');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+            });
+    
+            var form = document.querySelector("#appointmentForm");
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var iti = window.intlTelInputGlobals.getInstance(input);
+                var phoneNumber = iti.getNumber();
+                console.log("Full phone number: " + phoneNumber);
+                // Here you can add code to submit the form data
+            });
+        });
+    </script>
+</body>
+</html>
